@@ -1,0 +1,51 @@
+.page-header {
+    // display: flex;
+    min-height: 420px;
+    color: #fff;
+    // background-color: #1d2631;
+    background-image: url(../img/bg-back-mobile@1x.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center -10px;
+}
+
+.page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    // position: relative;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media @tablet-widths {
+    .page-header {
+        width: 100%;
+        min-height: 764px;
+        background-position: center 300px;
+        // background-image: url(../img/bg-back-mobile@1x.jpg);
+    }
+    .page-header__wrapper {
+        padding: 35px 20px 35px;
+        background-color: #283645;
+    }
+    .page-header__logo {
+        width: 147px;
+        height: 40px;
+        background: red url("..img/logo-pink-blue-mobile.svg") no-repeat;
+    }
+    .page-header__toggle {
+
+    }
+}
+
+@media @desktop-widths {
+    .page-header__toggle {
+        .no-outline();
+    }
+    .page-header__wrapper {}
+    .page-header {
+        display: flex;
+        justify-content: space-between;
+        // background-color: rgba(255, 255, 255, 0.3);
+    }
+}
