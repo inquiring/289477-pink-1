@@ -8,190 +8,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body class="page">
+<body>
     <header class="page-header">
+        <h1 class="visually-hidden">Сайт Pink</h1>
         <nav class="main-nav main-nav--closed main-nav--nojs">
-            <h1>pink<a class="main-nav__logo" href="index.html"></a></h1>
+            <a class="main-nav__logo" href="index.html"></a>
             <button class="main-nav__toggle" type="button">Открыть меню</button>
             <div class="main-nav__wrapper">
                 <ul class="main-nav__items">
-                    <li class="main-nav__item main-nav__item--active"><a>Главная</a></li>
+                    <li class="main-nav__item "><a>Главная</a></li>
                     <li class="main-nav__item"><a href="photo.html">Фотографии</a></li>
-                    <li class="main-nav__item"><a href="">Конкурс</a></li>
-                    <li class="main-nav__item"><a href="">HTML Academy</a></li>
+                    <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
+                    <li class="main-nav__item"><a href="#">HTML Academy</a></li>
                 </ul>
             </div>
         </nav>
     </header>
     <main class="page-main">
-        <div class="promo">
-            <div class="promo__img">
-                <img src="img/iphone-hand-mobile@1x.png" width="320" height="314" alt="hand-mobile">
+        <div class="bg bg__img">
+            <img src="http://placehold.it/150x100">
+        </div>
+        <section class="download">
+            <h2 class="visually-hidden">Скачать приложение</h2>
+            <p class="download__title visually-hidden">Взгляните на жизнь иначе!</p>
+            <a class="download__btn btn" href="#">Скачать приложение</a>
+            <div class="download__figure">
+                <figure><img src="img/logo-apple.svg" width="50" height="60" alt="apple-logo"></figure>
+                <figure><img src="img/logo-android.svg" width="50" height="60" alt="android-logo"></figure>
+                <figure><img src="img/logo-microsoft.svg" width="50" height="60" alt="microsoft-logo"></figure>
             </div>
-            <div class="download">
-                <p class="download__title">Взгляните на жизнь иначе!</p>
-                <a class="btn btn--download" href="#">Скачать приложение</a>
-                <div class="download__figure">
-                    <figure><img src="img/logo-apple.svg" width="50" height="60" alt="apple-logo"></figure>
-                    <figure><img src="img/logo-android.svg" width="50" height="60" alt="android-logo"></figure>
-                    <figure><img src="img/logo-microsoft.svg" width="50" height="60" alt="microsoft-logo"></figure>
-                </div>
-                <div class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
+            <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </section>
+        <section class="features">
+            <h2 class="visually-hidden">Преимущества</h2>
+            <div class="features__slogan">
+                <p class="features__text-slogan">Устали от серости мегаполиса?</p>
+                <p class="features__text-slogan">Нам есть, что вам
+                    <br> предложить!</p>
             </div>
-        </div>
-        <div class="tagline">
-            <div class="tagline__text">Устали от серости мегаполиса?</div>
-            <div class="tagline__text">Нам есть, что вам
-                <br>предложить!</div>
-        </div>
-        <div class="preview">
-            <h2 class="preview__title">Поднимает настроение</h2>
-            <p class="preview__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-            <h2 class="preview__title">Меняет мир вокруг</h2>
-            <p class="preview__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-            <h2 class="preview__title">Заводит новых друзей</h2>
-            <p class="preview__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-            <img class="preview__img" src="http://placehold.it/150x100" alt="img-phone">
-        </div>
-        <div class="effect">
-            <div class="effect__img">
-                <img src="http://placehold.it/238x276" width="238" height="276" alt="img-stopwatch">
+            <ul class="features-items">
+                <li class="features-item">
+                    <h3 class="features__title">Поднимает настроение</h3>
+                    <p class="features_descr">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+                </li>
+                <li class="features-item">
+                    <h3 class="features__title">Меняет мир вокруг</h3>
+                    <p class="features_descr">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                </li>
+                <li class="features-item">
+                    <h3 class="features__title">Заводит новых друзей</h3>
+                    <p class="features_descr">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+                </li>
+            </ul>
+            <img class="features__img" src="http://placehold.it/150x100" alt="img-phone">
+        </section>
+        <section class="reviews">
+            <div class="reviews__inner slider">
+                <h2 class="visually-hidden">Отзывы о нас</h2>
+                <ul class="reviews__items slider__wrapper">
+                    <li class="reviews__item slider__item">
+                        <h3 class="reviews__item‐name ">Николай Петров</h3>
+                        <blockquote class="reviews__item‐descr ">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+                        <p class="reviews__item-inform ">25 лет, водитель трамвая</p>
+                    </li>
+                    <li class="reviews__item slider__item">
+                        <h3 class="reviews__item‐name ">Николай Петров</h3>
+                        <blockquote class="reviews__item‐descr ">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+                        <p class="reviews__item-inform ">25 лет, водитель трамвая</p>
+                    </li>
+                    <li class="reviews__item slider__item">
+                        <h3 class="reviews__item‐name ">Николай Петров</h3>
+                        <blockquote class="reviews__item‐descr ">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+                        <p class="reviews__item-inform ">25 лет, водитель трамвая</p>
+                    </li>
+                </ul>
             </div>
-            <p class="effect__title">Эффект на 24 часа!</p>
-            <p class="effect__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-            <p class="effect__text effect__text--active">Узнать больше об исследовании</p>
-        </div>
-        <div class="reviews">
-            <div class="reviews__author">Николай Петров</div>
-            <figure><img src="img/quotes.svg" width="79" height="63" alt="img-guotes"></figure>
-            <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            <p class="reviews__author-inform">25 лет, водитель трамвая</p>
-        </div>
-        <!-- серый фон -->
-        <div class="slider slider-controls">
-            <input type="radio" name="slider-toggle" id="slider-table-1">
-            <input type="radio" name="slider-toggle" id="slider-table-2" checked>
-            <input type="radio" name="slider-toggle" id="slider-table-3">
-            <div class="control-labels  table-slider">
-                <label class="control-label" for="slider-table-1"></label>
-                <label class="control-label" for="slider-table-2"></label>
-                <label class="control-label" for="slider-table-3"></label>
+        </section>
+        <section class="prices">
+            <div class="prices__inner slider">
+                <h2 class="visually-hidden">Наши тарифы</h2>
+                <ul class="prices__items slider__wrapper">
+                    <li class="slider__item">
+                        <div class="prices">
+                            <h3 class="prices__title">База</h3>
+                            <p class="prices__price">1,99 USD</p>
+                            <ul class="prices__items">
+                                <li class="prices__item">Розовый фильтр</li>
+                                <li class="prices__item prices__item--none">Смайлики</li>
+                                <li class="prices__item prices__item--none">Комментарии</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="slider__item slider__item--active">
+                        <div class="prices">
+                            <h3 class="prices__title">Стандарт</h3>
+                            <p class="prices__price">3,99 USD</p>
+                            <ul class="prices__items">
+                                <li class="prices__item">Розовый фильтр</li>
+                                <li class="prices__item">Смайлики</li>
+                                <li class="prices__item prices__item--none">Комментарии</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="slider__item">
+                        <div class="prices">
+                            <h3 class="prices__title">Анлим</h3>
+                            <p class="prices__price">3,99 USD</p>
+                            <ul class="prices__items">
+                                <li class="prices__item">Розовый фильтр</li>
+                                <li class="prices__item">Смайлики</li>
+                                <li class="prices__item">Комментарии</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
             </div>
-            <div class="slider__wrapper">
-                <table class="slider__table">
-                    <tbody>
-                        <tr>
-                            <th class="slider__first-col-tablet"></th>
-                            <th>
-                                <p class="slider__title">База</p>
-                                <p class="slider__price">1,99 USD</p>
-                            </th>
-                            <th class="flag-hit">
-                                <div class="flag-hit__inner-wrapper">
-                                    <p class="slider__title">Стандарт</p>
-                                    <p class="slider__price">3,99 USD</p>
-                                </div>
-                            </th>
-                            <th>
-                                <p class="slider__title">Анлим</p>
-                                <p class="slider__price">9,99 USD</p>
-                            </th>
-                        </tr>
-                        <tr>
-                            <td class="slider__first-col-tablet">
-                                <span class="slider__feature-cell">Розовый фильтр</span>
-                            </td>
-                            <td>
-                                <div class="checkbox-inner-wrapper">
-                                    <span class="slider__feature">Розовый фильтр</span>
-                                    <div class="slider__checkbox slider__checkbox--checked">yes</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="checkbox-inner-wrapper">
-                                    <span class="slider__feature">Розовый фильтр</span>
-                                    <div class="slider__checkbox slider__checkbox--checked">yes</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="checkbox-inner-wrapper">
-                                    <span class="slider__feature">Розовый фильтр</span>
-                                    <div class="slider__checkbox slider__checkbox--checked">yes</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="slider__first-col-tablet">
-                                <span class="slider__feature-cell">Смайлики</span>
-                            </td>
-                            <td>
-                                <div class="checkbox-inner-wrapper">
-                                    <span class="slider__feature">Смайлики</span>
-                                    <div class="slider__checkbox slider__checkbox--unchecked">no</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="checkbox-inner-wrapper">
-                                    <span class="slider__feature">Смайлики</span>
-                                    <div class="slider__checkbox slider__checkbox--checked">yes</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="checkbox-inner-wrapper">
-                                    <span class="slider__feature">Смайлики</span>
-                                    <div class="slider__checkbox slider__checkbox--checked">yes</div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="slider__first-col-tablet">
-                                <span class="slider__feature-cell">Комментарии</span>
-                            </td>
-                            <td>
-                                <div class="checkbox-inner-wrapper">
-                                    <span class="slider__feature">Комментарии</span>
-                                    <div class="slider__checkbox slider__checkbox--unchecked">no</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="checkbox-inner-wrapper">
-                                    <span class="slider__feature">Комментарии</span>
-                                    <div class="slider__checkbox slider__checkbox--unchecked">no</div>
-                                </div>
-                            </td>
-                            <td>
-                                <div class="checkbox-inner-wrapper">
-                                    <span class="slider__feature">Комментарии</span>
-                                    <div class="slider__checkbox slider__checkbox--unchecked">no</div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        </div>
-        <div class="info">
-            <p class="info__tagline">Остались вопросы?Свяжитесь с нами!</p>
-            <span class="info__title">Звоните:</span>
-            <p class="info__text"><a href="tel:+7812556666">+7 (812) 555-66-66</a></p>
-            <span class="info__title">Пишите:</span>
-            <p class="info__text"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-            <span class="info__title">Приезжайте в гости:</span>
-            <p class="info__text">ул. Большая Конюшенная, 19/8</p>
-        </div>
-        <div class="map"></div>
+        </section>
+        <section class="contacts">
+            <h2 class="visually-hidden">Наши контакты</h2>
+            <p class="contacts__tagline">Остались вопросы?Свяжитесь с нами!</p>
+            <li class="contacts__items">
+                <li class="contacts__item">
+                    <h3 class="contacts__title ">Звоните:</h3>
+                    <p class="contacts__text "><a href="tel:+7812556666 ">+7 (812) 555-66-66</a></p>
+                </li>
+                <li class="contacts__item">
+                    <h3 class="contacts__title ">Пишите:</h3>
+                    <p class="contacts__text "><a href="mailto:mail@htmlacademy.ru ">mail@htmlacademy.ru</a></p>
+                </li>
+                <li class="contacts__item">
+                    <h3 class="contacts__title ">Приезжайте в гости:</h3>
+                    <p class="contacts__text ">ул. Большая Конюшенная, 19/8</p>
+                </li>
+            </li>
+            <div class="contacts__map "></div>
+        </section>
     </main>
     <footer class="page-footer">
-        <a class="page-footer__logo" href="index.html"><img src="img/logo-pink-blue-mobile.svg" width="150" height="40" alt="logotype"></a>
-        <div class="socials">
-            <a class="socials__btn socials__btn--twitter" href="#">twitter</a>
-            <a class="socials__btn socials__btn--facebook" href="#">facebook</a>
-            <a class="socials__btn socials__btn--youtube" href="#">youtube</a>
-        </div>
-        <div class="page-footer__copyright">
-            <p>Разработано</p>
-            <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="htmlacademy"></a>
+        <div class="page-footer__wrapper">
+            <a class="page-footer__logo" href="index.html"><img src="img/logo-pink-blue-mobile.svg" width="150" height="40" alt="logotype"></a>
+            <p class="social">
+                <span class="social-links">
+                    <a class="social-link  social‐link‐‐vk" href="#">twitter</a>
+                    <a class="social-link  social‐link‐‐fb" href="#">facebook</a>
+                    <a class="social-link  social‐link‐‐yb" href="#">youtube</a>
+                </span>
+            </p>
+            <div class="copyright">
+                <p class="copyright__text">Разработано
+                    <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="htmlacademy"></a>
+                </p>
+            </div>
         </div>
     </footer>
 </body>
