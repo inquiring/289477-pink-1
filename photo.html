@@ -6,133 +6,210 @@
     <title>HTML Academy: Pink</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Pixel Glass -->
+    <style>
+    HTML {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* По умолчанию показывается мобильный макет */
+        background-image: url("layouts/pink-index-mobile.jpg");
+    }
+    /* Планшет */
+
+    @media ( min-width: 660px) {
+        HTML {
+            /* Планшетный макет */
+            background-image: url("layouts/pink-index-tablet.jpg");
+        }
+    }
+    /* Десктоп */
+
+    @media ( min-width: 960px) {
+        HTML {
+            /* Десктопный макет */
+            background-image: url("layouts/pink-index-desktop.jpg");
+        }
+    }
+    </style>
+    <link href="../node_modules/pixel-glass/styles.css" rel="stylesheet">
+    <script src="../node_modules/pixel-glass/script.js"></script>
+    <!-- // Pixel Glass -->
 </head>
 
 <body>
     <header class="page-header">
-        <nav class="main-nav main-nav--closed main-nav--nojs">
-            <a class="main-nav__logo" href="index.html"></a>
-            <button class="main-nav__toggle" type="button">Открыть меню</button>
-            <div class="main-nav__wrapper">
+        <div class="page-header__inner">
+            <nav class="main-nav main-nav--opened main-nav--nojs">
+                <a class="main-nav__logo" href="index.html"></a>
+                <button class="main-nav__toggle" type="button">Открыть меню</button>
                 <ul class="main-nav__items">
-                    <li class="main-nav__item"><a href="index.html">Главная</a></li>
-                    <li class="main-nav__item"><a>Фотографии</a></li>
-                    <li class="main-nav__item"><a href="form.html">Конкурс</a></li>
-                    <li class="main-nav__item"><a href="#">HTML Academy</a></li>
+                    <li class="main-nav__item "><a class="main-nav__link" href="index.html">Главная</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link">Фотографии</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="form.html">Конкурс</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+            <h1 class="page-header__title">Фотографии пользователей</h1>
+        </div>
     </header>
     <main class="page-main">
-        <h1 class="page-main__title">Фотографии пользователей</h1>
-        <p class="page-main__slogan">Взгляните на фотографии, которые выкладывают пользователи!Видите, как не хватает ваших?</p>
-        <section class="photo-users">
-            <h2 class="visually-hidden">Фотографии пользователей</h2>
-            <div class="photo">
-                <span class="flag flag-new hidden">ПАНОРАМА ДНЯ</span>
-                <a href="#" class="photo__link photo__link--panorama">
-                    <img src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="photo">
-                </a>
-                <p class="photo__author">Анна</p>
-                <p class="photo__time">(5 минут назад)</p>
-                <p class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
-                <p class="photo__like">Нравится: 215</p>
-            </div>
-            <div class="photo">
-                <a href="#" class="photo__link">
-                    <img src="img/photo-1-mobile@1x.jpg" width="280" height="180" alt="photo">
-                </a>
-                <p class="photo__author">Левон</p>
-                <p class="photo__time">(5 часов назад)</p>
-                p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-                <p class="photo__like">Нравится: 356</p>
-            </div>
-            <div class="photo">
-                <a href="#" class="photo__link">
-                    <img src="img/photo-2-mobile@1x.jpg" width="280" height="180" alt="photo">
-                </a>
-                <p class="photo__author">Антон</p>
-                <p class="photo__time">(12 часов назад)</p>
-                <p class="photo__comment">Соседи будут рады!</p>
-                <p class="photo__like">Нравится: 666</p>
-            </div>
-            <div class="photo">
-                <a href="#" class="photo__link">
-                    <img src="img/photo-3-mobile@1x.jpg" width="280" height="180" alt="photo">
-                </a>
-                <p class="photo__author">Борис</p>
-                <p class="photo__time">(20 часов назад)</p>
-                <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном</p>
-                <p class="photo__like">Нравится: 215</p>
-            </div>
-            <div class="photo">
-                <a href="#" class="photo__link">
-                    <img src="img/photo-4-mobile@1x.jpg" width="280" height="180" alt="photo">
-                </a>
-                <p class="photo__author">Сергей</p>
-                <p class="photo__time">(25 часов назад)</p>
-                <p class="photo__comment">Самая кубанская в мире!</p>
-                <p class="photo__like">Нравится: 4</p>
-            </div>
-            <div class="photo">
-                <a href="#" class="photo__link">
-                    <img src="img/photo-5-mobile@1x.jpg" width="280" height="180" alt="photo">
-                </a>
-                <p class="photo__author">Максим</p>
-                <p class="photo__time">(40 часов назад)</p>
-                <p class="photo__comment">Где снег-то?</p>
-                <p class="photo__like">Нравится: 150</p>
-            </div>
-            <div class="photo">
-                <a href="#" class="photo__link">
-                    <img src="img/photo-6-mobile@1x.jpg" width="280" height="180" alt="photo">
-                </a>
-                <p class="photo__author">Надежда</p>
-                <p class="photo__time">(45 часов назад)</p>
-                <p class="photo__comment">Всем GM и взаимные лайки!</p>
-                <p class="photo__like"><span>&#9825;</span>Нравится: 2560</p>
+        <div class="page-main__slogan-wrapper">
+            <p class="page-main__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        </div>
+        <section class="posts">
+            <div class="posts__wrapper">
+                <h2 class="posts__title posts__title--hidden">Фотографии пользователей</h2>
+                <!--  -->
+                <article class="post post--panorama">
+                    <!-- <span class="flag flag-new hidden">ПАНОРАМА ДНЯ</span> -->
+                    <a href="#" class="post__link">
+                        <img class="post__panorama" src="img/panorama-mobile@1x.jpg" width="" height="137" alt="panorama">
+                    </a>
+                    <div class="post__desc post__desc--panorama">
+                        <span class="post__author">Анна</span>
+                        <span class="post__time">(5 минут назад)</span>
+                        <h3 class="post__title">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</h3>
+                        <span class="post__like post__like--panorama">Нравится: 215</span>
+                    </div>
+                </article>
+                <article class="post">
+                    <a href="#" class="post__link">
+                        <img class="post__img" src="img/photo-1-mobile@1x.jpg" width="" height="180" alt="post-1">
+                    </a>
+                    <div class="post__desc">
+                        <span class="post__author">Левон</span>
+                        <span class="post__time">(5 часов назад)</span>
+                        <h3 class="post__title">Вчера он на луну летал, сегодня в руки к нам попал.</h3>
+                        <span class="post__like">Нравится: 356</span>
+                    </div>
+                </article>
+                <article class="post">
+                    <a href="#" class="post__link">
+                        <img class="post__img" src="img/photo-2-mobile@1x.jpg" width="280" height="180" alt="post-2">
+                    </a>
+                    <div class="post__desc">
+                        <span class="post__author">Антон</span>
+                        <span class="post__time">(12 часов назад)</span>
+                        <h3 class="post__title">Соседи будут рады!</h3>
+                        <span class="post__like">Нравится: 666</span>
+                    </div>
+                </article>
+                <article class="post">
+                    <a href="#" class="post__link">
+                        <img class="post__img" src="img/photo-3-mobile@1x.jpg" width="280" height="180" alt="post-3">
+                    </a>
+                    <div class="post__desc">
+                        <span class="post__author">Борис</span>
+                        <span class="post__time">(20 часов назад)</span>
+                        <h3 class="post__title">Здесь могла быть ваша цитата о высоком и вечном</h3>
+                        <span class="post__like">Нравится: 215</span>
+                    </div>
+                </article>
+                <article class="post">
+                    <a href="#" class="post__link">
+                        <img class="post__img" src="img/photo-4-mobile@1x.jpg" width="280" height="180" alt="post-4">
+                    </a>
+                    <div class="post__desc">
+                        <span class="post__author">Сергей</span>
+                        <span class="post__time">(25 часов назад)</span>
+                        <h3 class="post__title">Самая кубанская в мире!</h3>
+                        <span class="post__like">Нравится: 4</span>
+                    </div>
+                </article>
+                <article class="post">
+                    <a href="#" class="post__link">
+                        <img class="post__img" src="img/photo-5-mobile@1x.jpg" width="280" height="180" alt="post-5">
+                    </a>
+                    <div class="post__desc">
+                        <span class="post__author">Максим</span>
+                        <span class="post__time">(40 часов назад)</span>
+                        <h3 class="post__title">Где снег-то?</h3>
+                        <span class="post__like">Нравится: 150</span>
+                    </div>
+                </article>
+                <article class="post">
+                    <a href="#" class="post__link">
+                        <img class="post__img" src="img/photo-6-mobile@1x.jpg" width="280" height="180" alt="post-6">
+                    </a>
+                    <div class="post__desc">
+                        <span class="post__author">Надежда</span>
+                        <span class="post__time">(45 часов назад)</span>
+                        <h3 class="post__title">Всем GM и взаимные лайки!</h3>
+                        <span class="post__like">Нравится: 2560</span>
+                    </div>
+                </article>
             </div>
         </section>
         <section class="upload">
-            <h2 class="visually-hidden">Редактирование фотографий</h2>
+            <h2 class="upload__title upload__title--hidden">Редактирование фотографий</h2>
             <p class="upload__slogan">Затмите их всех!
                 <br>Выкладывайте все, что накопилось в телефоне!</p>
-            <form class="upload__form" action="https://echo.htmlacademy.ru/" method="post">
-                <img class="upload__img" src="img/photo-7-mobile@1x.jpg" width="280" height="374" alt="upload photo">
-                <div class="editor">
-                    <button class="editor__btn editor__btn--crop" type="button">редактировать</button>
-                    <input class="editor__range" type="range" min="1" max="10">
+            <form class="upload__form " action="https://echo.htmlacademy.ru/" method="post">
+                <div class="upload__inner">
+                    <img class="upload__img" src="img/photo-7-mobile@1x.jpg" width="280" height="374" alt="upload post">
+                    <div class="upload__container">
+                        <div class="editor">
+                            <div class="editor-item">
+                                <button class="editor-item__btn editor-item__btn--crop" type="button">редактировать</button>
+                                <input class="editor-item__range editor-item__range--hidden" type="range" min="1" max="10">
+                            </div>
+                            <div class="editor-item">
+                                <button class="editor-item__btn editor-item__btn--fill" type="button">редактировать</button>
+                                <input class="editor-item__range editor-item__range--hidden" type="range" min="1" max="10">
+                            </div>
+                            <div class="editor-item">
+                                <button class="editor-item__btn editor-item__btn--contrast" type="button">редактировать</button>
+                                <input class="editor-item__range editor-item__range--hidden" type="range" min="1" max="10">
+                            </div>
+                        </div>
+                        <input class="btn btn--upload upload__btn" type="submit" value="Запостить">
+                        <input class="btn btn--cancel upload__btn" type="reset" value="Отмена">
+                    </div>
                 </div>
-                <div class="editor">
-                    <button class="editor__btn editor__btn--fill" type="button">редактировать</button>
-                    <input class="editor__range" type="range" min="1" max="10">
-                </div>
-                <div class="editor">
-                    <button class="editor__btn editor__btn--contrast" type="button">редактировать</button>
-                    <input class="editor__range" type="range" min="1" max="10">
-                </div>
-                <input class="upload-input" type="submit" value="Запостить">
-                <input class="cancel-input" type="reset" value="Отмена">
             </form>
         </section>
     </main>
     <footer class="page-footer">
         <div class="page-footer__wrapper">
             <a class="page-footer__logo" href="index.html"><img src="img/logo-pink-blue-mobile.svg" width="150" height="40" alt="logotype"></a>
-            <p class="social">
-                <span class="social-links">
-                    <a class="social-link  social‐link‐‐vk" href="#">twitter</a>
-                    <a class="social-link  social‐link‐‐fb" href="#">facebook</a>
-                    <a class="social-link  social‐link‐‐yb" href="#">youtube</a>
-                </span>
-            </p>
+            <!--  -->
+            <section class="social-links">
+                <h2 class="social-links__title social-links__title--hidden">Мы есть в социальных сетях</h2>
+                <a class="social-link social-link‐‐tw" href="#">twitter</a>
+                <a class="social-link social-link‐‐fb" href="#">facebook</a>
+                <a class="social-link social-link‐‐yb" href="#">youtube</a>
+            </section>
             <div class="copyright">
-                <p class="copyright__text">Разработано
-                    <a href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="htmlacademy"></a>
-                </p>
+                <span class="copyright__text">Разработано
+                    <a class="copyright__link" href="https://htmlacademy.ru"><img src="img/logo-htmlacademy.svg" width="27" height="34" alt="htmlacademy"></a>
+                </span>
             </div>
         </div>
     </footer>
+    <script>
+    // add() для добавления класса в список
+    // remove() для удаления класса из списка
+    // contains() для проверки наличия класса в списке
+    // toggle() для переключения класса — добавления при отсутствии в списке и удаления при наличии (с некоторыми особенностями)
+    // item() для получения класса по его индексу в списке
+    // toString() для превращения списка в строку
+    // length для получения количества классов в списке
+    // value для добавления дополнительных свойств и методов для объекта  classList
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+            navMain.classList.remove('main-nav--closed');
+            navMain.classList.add('main-nav--opened');
+        } else {
+            navMain.classList.add('main-nav--closed');
+            navMain.classList.remove('main-nav--opened');
+        }
+    });
+    </script>
 </body>
 
 </html>

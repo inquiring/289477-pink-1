@@ -1,78 +1,101 @@
-.foto {
+.posts {
   display: flex;
   flex-direction: column;
-  text-align: center;
-  color: #283645;
-  line-height: 24px;
-  & img {
-    margin: 0 auto;
+  .container()
+
+    @media @tablet-widths {
+    // &--panorama {} 
+    flex-flow: row wrap;
+    justify-content: space-between;
   }
 }
 
-.foto__title {
-  padding-top: 54px;
-  padding-bottom: 56px;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 30px;
-}
-
-.foto__author-time {
+.post {
   display: flex;
-  flex-direction: row;
+
+  margin-bottom: 20px;
+
+  line-height: 24px;
+
+  color: #283645;
+
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  @media @tablet-widths {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+
+    &--panorama {
+      width: 100%;
+      margin: auto;
+    }
+  }
 }
 
-.foto__author {
-  text-align: left;
+
+.post__link {
+  display: flex;
+
+  min-width: 280px;
+  height: 180px;
+
+  flex-basis: 100%;
+
+  &--panorama {
+    width: 100%;
+    height: 137px;
+
+    flex-basis: 100%;
+    // background-size: auto; 
+  }
+}
+
+
+.post__img {
+  margin: auto;
+}
+
+.post__author {
+  margin-right: 5px;
+  margin-left: 15px;
+
   font-size: 14px;
   font-weight: 700;
+
+  align-self: baseline;
 }
 
-.foto__time {
+.post__time {
+  margin-right: 90px;
+
   font-size: 12px;
   font-weight: 300;
+
   text-transform: uppercase;
+
+  align-self: baseline;
 }
 
-.foto__comment {
-  text-align: left;
+.post__comment {
+  margin: 0 15px;
+
   font-size: 14px;
   font-weight: 400;
+
+  flex-basis: 100%;
 }
 
-.foto__like {
-  text-align: left;
-  color: #d22856;
+.post__like {
+  margin-left: 30px;
+
   font-size: 12px;
   font-weight: 400;
-  line-height: 24px;
+
   text-transform: uppercase;
-  & span {
-    margin-right: 19px;
-  }
-}
 
-.foto__user {
-  text-align: center;
-}
-
-.foto-user__btn {
-  display: block;
-  text-align: center;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
-  border: 3px solid #d22856;
-  border-radius: 50px 50px 50px 50px;
-  margin-top: 28px;
-  padding: 10px 0px;
   color: #d22856;
-  text-decoration: none;
-  margin-bottom: 20px;
-}
-.foto-user__btn--of{
-  color: #283645;
-  border: 3px solid #283645;
-  opacity: 0.1;
+
+  flex-basis: 100%;
 }

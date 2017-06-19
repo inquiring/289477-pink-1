@@ -1,0 +1,36 @@
+.editor {
+  // display: flex; 
+  // flex-wrap: wrap; 
+  // align-content: center; 
+  // min-width: 240px; 
+  min-height: 48px;
+  padding-bottom: 25px;
+
+  @media @tablet-widths {
+    display: table-cell;
+
+    min-height: 48px;
+
+    border: 1px dotted red;
+  }
+}
+
+// .editor-item { 
+//     margin: auto; 
+//     flex-basis: 30%; 
+//     border: 1px dotted green; 
+// } 
+
+.editor-item__btn {
+  font-size: 0;
+
+  .visually-hidden()
+}
+
+.editor-item__range {
+  min-width: 240px;
+
+  &--hidden {
+    .visually-hidden()
+  }
+}

@@ -1,0 +1,156 @@
+.post {
+  margin-bottom: 20px;
+
+  text-align: left;
+
+  background-color: #f2f2f2;
+
+  &--panorama {
+    position: relative;
+
+    max-width: 320px;
+    margin-top: 137px;
+  }
+
+  @media @tablet-widths {
+    width: 300px;
+
+    &--panorama {
+      min-width: 620px;
+      margin-top: 509px;
+      margin-bottom: 50px;
+    }
+  }
+
+  @media @desktop-widths {
+    &--panorama {
+      min-width: 940px;
+      // max-width: 1200px; 
+    }
+  }
+}
+
+.post__title {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.post__img {
+  display: block;
+
+  max-width: 280px;
+
+  @media @tablet-widths {
+    max-width: 300px;
+    height: 300px;
+    margin: 0;
+  }
+}
+
+.post__panorama {
+  position: absolute;
+  top: -137px;
+  right: -20px;
+
+  display: block;
+
+  min-width: 320px;
+  margin: 0 auto;
+
+  @media @tablet-widths {
+    top: -509px;
+    right: -40px;
+
+    max-width: 700px;
+    height: 509px;
+  }
+
+  @media @desktop-widths {
+    right: -130px;
+
+    min-width: 1200px;
+    height: 505px;
+  }
+}
+
+.post__desc {
+  padding: 20px 20px 30px;
+
+  color: #283645;
+  background-color: #f2f2f2;
+
+  @media @tablet-widths {
+    position: relative;
+
+    max-width: 300px;
+    min-height: 83px;
+    margin: 0;
+    padding: 22px 28px 50px;
+
+    &--panorama {
+      max-width: 578px;
+      margin: auto;
+      padding: 21px 27px 13px;
+    }
+  }
+
+  @media @desktop-widths {
+    box-sizing: border-box;
+    min-width: 300px;
+    min-height: 156px;
+    padding: 21px 28px 13px;
+
+    &--panorama {
+      max-width: 940px;
+      min-height: 96px;
+      margin: auto;
+      padding: 21px 27px 0;
+    }
+  }
+}
+
+.post__author {
+  margin-right: 5px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  @media @tablet-widths {
+    margin-right: 0;
+  }
+}
+
+.post__time {
+  font-size: 14px;
+  font-weight: 400;
+
+  text-align: left;
+
+  @media @tablet-widths {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+}
+
+.post__like {
+  margin-left: 30px;
+
+  font-size: 12px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+
+  color: #d22856;
+
+  @media @tablet-widths {
+    position: absolute;
+    bottom: 23px;
+    left: -2px;
+
+    &--panorama {
+      position: absolute;
+      top: 24px;
+      left: 458px;
+    }
+  }
+}

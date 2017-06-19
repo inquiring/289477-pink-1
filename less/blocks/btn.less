@@ -1,14 +1,69 @@
-.btn--download {
+.btn {
   display: block;
-  text-align: center;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 18px;
-  border: 3px solid #fff;
-  border-radius: 50px 50px 50px 50px;
+
   margin-top: 28px;
-  padding: 10px 0px;
-  color: #fff;
-  text-decoration: none;
   margin-bottom: 20px;
+  padding: 15px 35px;
+
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+
+  text-align: center;
+  text-decoration: none;
+
+  color: #fff;
+  border-style: solid;
+  border-radius: 50px;
+  // index
+  &--download {
+    max-width: 274px;
+
+    color: #fff;
+    border: 3px solid #fff;
+  }
+  // photo
+  &--upload {
+    min-width: 274px;
+
+    color: #d22856;
+    border-color: #d22856;
+    @media @tablet-widths {
+      min-width: 260px;
+      padding: 16px 84px 16px 78px;
+    }
+  }
+  &--cancel {
+    min-width: 274px;
+
+    color: #f2f2f2;
+    border-color: #dddfe0;
+    @media @tablet-widths {
+      min-width: 260px;
+      margin-top: 14px;
+      margin-bottom: 0;
+      padding: 16px 84px 16px 78px;
+    }
+  }
+  // form
+  &--send {
+    min-width: 280px;
+    padding: 20px 45px 22px;
+
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 5px;
+    background-color: #2aab6d;
+  }
+  &--modal-content {
+    margin: 0 auto;
+    padding: 25px 67px 24px;
+
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 0;
+    background-color: #2aab6d;
+  }
 }

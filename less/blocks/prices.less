@@ -1,1 +1,152 @@
+.prices {
+  overflow: hidden;
 
+  max-width: 320px;
+  padding-top: 60px;
+  padding-bottom: 100px;
+
+  line-height: 30px;
+
+  background-color: #f2f2f2;
+
+  @media @tablet-widths {
+    // overflow: ; 
+    max-width: 100%;
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  @media @desktop-widths {
+    padding-top: 75px;
+    padding-bottom: 135px;
+  }
+}
+
+.prices__title {
+  min-width: 280px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #fff;
+  border: 2px solid #e5e5e5;
+  border-top: none;
+  border-bottom: none;
+  background-color: #283645;
+
+  &--hidden {
+    .visually-hidden()
+  }
+
+  @media @tablet-widths {
+    max-width: 150px;
+    padding-top: 14px;
+    padding-bottom: 9px;
+  }
+
+  @media @desktop-widths {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.prices__name {
+  margin: 0;
+
+  font-weight: 700;
+}
+
+.prices__table {
+  position: relative;
+  right: 172%;
+
+  border-collapse: collapse;
+
+  @media @tablet-widths {
+    right: 0;
+
+    margin: auto;
+  }
+}
+
+.prices__price {
+  margin: 0;
+
+  font-size: 24px;
+  font-weight: 300;
+
+  @media @tablet-widths {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  @media @desktop-widths {
+    font-size: 24px;
+  }
+}
+
+.prices__item {
+  padding: 15px 25px;
+
+  font-size: 14px;
+
+  text-align: left;
+  text-transform: uppercase;
+
+  color: #283645;
+  border: 2px solid #e5e5e5;
+  border-top: none;
+
+  @media @tablet-widths {
+    position: relative;
+
+    padding: 7px 17px;
+
+    text-transform: capitalize;
+    //
+
+    &--hidden {
+      font-size: 0;
+    }
+    // галочки YES 
+
+    &--checked::after {
+      content: "";
+      position: absolute;
+      top: 25%;
+      left: 40%;
+
+      width: 25px;
+      height: 10px;
+
+      transform: rotate(-45deg);
+
+      border-bottom: 3px solid #3dc643;
+      border-left: 3px solid #3dc643;
+    }
+    // крестики NO 
+
+    &--unchecked::after ,
+    &--unchecked::before {
+      content: "";
+      position: absolute;
+      top: 45%;
+      left: 35%;
+
+      width: 33px;
+      height: 3px;
+
+      background-color: #f25b26;
+    }
+
+    &--unchecked::after {
+      transform: rotate(-45deg);
+    }
+
+    &--unchecked::before {
+      transform: rotate(45deg);
+    }
+  }
+}
