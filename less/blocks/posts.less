@@ -1,0 +1,35 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+
+  .container();
+
+    @media @tablet-widths {
+    display: flex;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+    //
+  }
+}
+
+.posts__title--hidden {
+  .visually-hidden()
+}
+
+.posts__wrapper {
+  @media @tablet-widths {
+    display: flex;
+
+    width: 620px;
+    margin: auto;
+
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+
+  @media @desktop-widths {
+    width: 940px;
+    margin: auto;
+  }
+}

@@ -38,18 +38,19 @@
 
 <body>
     <header class="page-header">
-        <h1 class="page-header__title page-header__title--hidden">Сайт Pink</h1>
-        <nav class="main-nav main-nav--opened main-nav--nojs">
-            <a class="main-nav__logo" href="index.html"></a>
-            <button class="main-nav__toggle" type="button">Открыть меню</button>
-            <ul class="main-nav__items">
-                <li class="main-nav__item "><a class="main-nav__link" href="index.html">Главная</a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
-                <li class="main-nav__item"><a class="main-nav__link">Конкурс</a></li>
-                <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
-            </ul>
-        </nav>
-        <!-- <h1 class="main-header__title main-header__title--form">Конкурс на самое безбашенное путешествие с Пинк</h1> -->
+        <div class="page-header__inner">
+            <nav class="main-nav main-nav--opened main-nav--nojs">
+                <a class="main-nav__logo" href="index.html"></a>
+                <button class="main-nav__toggle" type="button">Открыть меню</button>
+                <ul class="main-nav__items">
+                    <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="photo.html">Фотографии</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link">Конкурс</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
+                </ul>
+            </nav>
+            <h1 class="page-header__title page-header__title--form">Конкурс на самое безбашенное путешествие с Пинк</h1>
+        </div>
     </header>
     <main class="page-main">
         <div class="page-main__slogan-wrapper">
@@ -58,61 +59,61 @@
         <form class="forms" action="https://echo.htmlacademy.ru" method="post">
             <h2 class="forms__title forms__title--hidden">Заполни и отправь форму для участия в конкурсе</h2>
             <!--  -->
-            <div class="forms__inner">
-                <!--  -->
+            <div class="forms__wrapper">
                 <fieldset class="forms__container forms__container--name">
-                    <legend class="forms__legend forms__legend--name">Расскажите, как Вас зовут:
-                        <div class="forms__inner">
-                            <label for="family-field" class="forms__label">Фамилия:</label>
-                            <input class="forms__input" type="text" name="family" id="family-field" placeholder="Укажите фамилию*" required>
-                        </div>
-                        <div class="forms__inner">
-                            <label for="name-field" class="forms__label">Имя:</label>
-                            <input class="forms__input" type="text" name="name" id="name-field" placeholder="Введите ваше имя*" required>
-                        </div>
-                        <div class="forms__inner">
-                            <label for="patronymic-field" class="forms__label">Отчество:</label>
-                            <input class="forms__input" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
-                        </div>
-                    </legend>
+                    <legend class="forms__legend forms__legend--name">Как Вас зовут?:</legend>
+                    <div class="forms__inner">
+                        <label for="family-field" class="forms__label">Фамилия:</label>
+                        <input class="forms__input" type="text" name="family" id="family-field" placeholder="Укажите фамилию*" required>
+                    </div>
+                    <div class="forms__inner">
+                        <label for="name-field" class="forms__label">Имя:</label>
+                        <input class="forms__input" type="text" name="name" id="name-field" placeholder="Введите ваше имя*" required>
+                    </div>
+                    <div class="forms__inner">
+                        <label for="patronymic-field" class="forms__label">Отчество:</label>
+                        <input class="forms__input" type="text" name="patronymic" id="patronymic-field" placeholder="Ну и отчество тоже">
+                    </div>
                 </fieldset>
-                <!--  -->
+                <!-- выше форма name -->
                 <fieldset class="forms__container forms__container--adventure">
                     <legend class="forms__legend forms__legend--adventure">Ваши безбашенные достижения в путешествии</legend>
                     <!--  -->
                     <input class="forms__checkbox forms__checkbox--checked" type="checkbox" name="checkbox-form" value="shark-selfie" id="shark-selfie-check" checked>
-                    <label for="shark-selfie-check" class="forms__label">Сделал селфи с акулой</label>
+                    <label class="forms__label" for="shark-selfie-check">Сделал селфи с акулой</label>
                     <!--  -->
                     <input class="forms__checkbox forms__checkbox--checked" type="checkbox" name="checkbox-form" value="beach" id="beach-check" checked>
-                    <label for="beach-check" class="forms__label">Обгорел на пляже</label>
+                    <label class="forms__label" for="beach-check">Обгорел на пляже</label>
                     <!--  -->
                     <input class="forms__checkbox" type="checkbox" name="checkbox-form" value="see-norris" id="see-norris-check">
-                    <label for="see-norris-check" class="forms__label">Видел Чака Норриса</label>
+                    <label class="forms__label" for="see-norris-check">Видел Чака Норриса</label>
                     <!--  -->
                     <input class="forms__checkbox" type="checkbox" name="checkbox-form" value="souvenirs" id="souvenirs-check">
-                    <label for="souvenirs-check" class="forms__label">Накупил сувениров</label>
+                    <label class="forms__label" for="souvenirs-check">Накупил сувениров</label>
                     <!--  -->
                     <input class="forms__checkbox forms__checkbox--checked" type="checkbox" name="checkbox-form" value="tower" id="tower-check" checked>
-                    <label for="tower-check" class="forms__label">Удержал башню</label>
+                    <label class="forms__label" for="tower-check">Удержал башню</label>
                     <!--  -->
                     <input class="forms__checkbox" type="checkbox" name="checkbox-form" value="rout" id="rout-check">
-                    <label for="rout-check" class="forms__label">Разгромил отель</label>
+                    <label class="forms__label" for="rout-check">Разгромил отель</label>
                 </fieldset>
-                <!--  -->
+                <!-- выше форма adventure -->
                 <fieldset class="forms__container forms__container--contacts">
                     <legend class="forms__legend forms__legend--contacts">Контактная информация</legend>
+                    <!--  -->
                     <div class="forms__inner forms__inner--contacts">
-                        <label for="tel-field" class="forms__label forms__label--contacts">Номер телефона</label>
+                        <label class="forms__label forms__label--contacts" for="tel-field">Номер телефона</label>
                         <input class="forms__input forms__input--contacts" type="tel" name="tel" id="tel-field" placeholder="Номер, пожалуйста">
                     </div>
                     <div class="forms__inner forms__inner--contacts">
-                        <label for="email-field" class="forms__label forms__label--contacts">Адрес почты</label>
+                        <label class="forms__label forms__label--contacts" for="email-field">Адрес почты</label>
                         <input class="forms__input forms__input--contacts" type="email" id="email-field" name="email" placeholder="Введите почту*" required>
                     </div>
                 </fieldset>
-                <!--  -->
+                <!-- выше форма contacts -->
                 <fieldset class="forms__container forms__container--app">
                     <legend class="forms__legend forms__legend--app">С каким приложением путешествовали?</legend>
+                    <!--  -->
                     <input class="forms__radio forms__radio--checked" type="radio" name="type" value="iOS" id="iOS-radio" checked>
                     <label for="iOS-radio" class="forms__label">Pink для iOS</label>
                     <!--  -->
@@ -122,17 +123,17 @@
                     <input class="forms__radio" type="radio" name="type" value="windows" id="windows-radio">
                     <label for="windows-radio" class="forms__label">Windows Phone</label>
                 </fieldset>
-                <!--  -->
-                <div class="forms__container forms__container--emotions">
-                    <label for="desc-field" class="forms__label forms__label--textarea">Опишите свои эмоции</label>
+                <!-- выше форма app -->
+                <fieldset class="forms__container forms__container--emotions">
+                    <legend for="desc-field" class="forms__label forms__label--textarea">Опишите свои эмоции</legend>
                     <textarea class="forms__textarea" name="desc" placeholder="Можно прям в красках, не стесняясь в выражениях" id="desc-field"></textarea>
-                </div>
+                </fieldset>
                 <!--  -->
+                <footer class="forms__footer">
+                    <input class="btn btn--send forms__btn" type="submit" name="order" value="Отправить форму">
+                    <p class="forms__text">* - обязательные поля</p>
+                </footer>
             </div>
-            <footer class="forms__footer">
-                <input class="btn btn--send forms__btn" type="submit" name="order" value="Отправить форму">
-                <p class="forms__text">* - обязательные поля</p>
-            </footer>
         </form>
     </main>
     <footer class="page-footer">
@@ -141,7 +142,7 @@
             <!--  -->
             <section class="social-links">
                 <h2 class="social-links__title social-links__title--hidden">Мы есть в социальных сетях</h2>
-                <a class="social-link social-link‐‐vk" href="#">twitter</a>
+                <a class="social-link social-link‐‐tw" href="#">twitter</a>
                 <a class="social-link social-link‐‐fb" href="#">facebook</a>
                 <a class="social-link social-link‐‐yb" href="#">youtube</a>
             </section>
@@ -152,6 +153,18 @@
             </div>
         </div>
     </footer>
+    <div class="modal-content modal-content--closed">
+        <h2 class="modal-content__title">Что-то пошло не так!</h2>
+        <p class="modal-content__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+        <button class="btn btn--modal-content modal-content__btn" type="button" title="Закрыть">OK</button>
+    </div>
+    <div class="modal-content modal-content--success modal-content--closed">
+        <h2 class="modal-content__title modal-content__title--success">Ваша заявка отправлена</h2>
+        <p class="modal-content__text modal-content__text--success">Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим ее и&nbsp; оповестим вас.</p>
+        <div class="modal-content__btn-box">
+            <button class="btn btn--modal-content modal-content__btn modal-content__btn--success">Закрыть окно</button>
+        </div>
+    </div>
     <script>
     // add() для добавления класса в список
     // remove() для удаления класса из списка

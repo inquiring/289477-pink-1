@@ -1,17 +1,22 @@
 .tagline {
-  .container();
   margin: 0 auto;
-  color: #535e6a;
-  text-align: center;
+
   font-family: "Open Sans";
   font-size: 24px;
   font-weight: 300;
+
+  text-align: center;
+
+  color: #535e6a;
+
+  .container()
 }
 
 .tagline__text {
   padding: 30px 35px;
+
   &:first-child {
-    padding-bottom: 0px;
+    padding-bottom: 0;
   }
 }
 
@@ -23,16 +28,19 @@
 
 @media @desktop-widths {
   .tagline {
+    width: 730px;
 
-    width:730px;
-    color: #283645;
     font-size: 50px;
     font-weight: 300;
+
+    color: #283645;
   }
-  .tagline__text{
-     padding: 78px 0px 75px;
-       &:last-child {
-    padding-top: 20px;
-  }
+
+  .tagline__text {
+    padding: 78px 0 75px;
+
+    &:last-child {
+      padding-top: 20px;
+    }
   }
 }
