@@ -12,14 +12,14 @@
         background-repeat: no-repeat;
         background-position: 50% 0;
         /* По умолчанию показывается мобильный макет */
-        background-image: url("layouts/pink-index-mobile.jpg");
+        background-image: url("img/layouts/pink-index-mobile.jpg");
     }
     /* Планшет */
 
     @media ( min-width: 660px) {
         HTML {
             /* Планшетный макет */
-            background-image: url("layouts/pink-index-tablet.jpg");
+            background-image: url("img/layouts/pink-index-tablet.jpg");
         }
     }
     /* Десктоп */
@@ -27,7 +27,7 @@
     @media ( min-width: 960px) {
         HTML {
             /* Десктопный макет */
-            background-image: url("layouts/pink-index-desktop.jpg");
+            background-image: url("img/layouts/pink-index-desktop.jpg");
         }
     }
     </style>
@@ -54,7 +54,8 @@
     </header>
     <main class="page-main">
         <div class="page-main__slogan-wrapper">
-            <p class="page-main__slogan page-main__slogan--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+            <p class="page-main__slogan page-main__slogan--form">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="page-main__slogan page-main__slogan--mobile-hidden">Пожалуйста, заполните форму ниже:</span></p>
+
         </div>
         <form class="forms" action="https://echo.htmlacademy.ru" method="post">
             <h2 class="forms__title forms__title--hidden">Заполни и отправь форму для участия в конкурсе</h2>
