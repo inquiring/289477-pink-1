@@ -12,7 +12,13 @@
     <header class="page-header">
         <div class="page-header__inner">
             <nav class="main-nav main-nav--opened main-nav--nojs">
-                <a class="main-nav__logo" href="index.html"></a>
+                <a class="main-nav__logo" href="index.html">
+                    <picture>
+                        <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+                        <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+                        <img src="img/logo-pink-white-mobile.svg" alt="PINK">
+                    </picture>
+                </a>
                 <button class="main-nav__toggle" type="button">Открыть меню</button>
                 <ul class="main-nav__items">
                     <li class="main-nav__item "><a class="main-nav__link" href="index.html">Главная</a></li>
@@ -143,7 +149,12 @@
     </main>
     <footer class="page-footer">
         <div class="page-footer__wrapper">
-            <a class="page-footer__logo" href="index.html"><img src="img/logo-pink-blue-mobile.svg" width="150" height="40" alt="logotype"></a>
+            <a class="page-footer__logo" href="index.html">
+                <picture>
+                    <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+                    <img src="img/logo-pink-blue-mobile.svg" alt="PINK">
+                </picture>
+            </a>
             <!--  -->
             <section class="social-links">
                 <h2 class="social-links__title social-links__title--hidden">Мы есть в социальных сетях</h2>
