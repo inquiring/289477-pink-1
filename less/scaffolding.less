@@ -8,30 +8,40 @@ body {
   text-decoration: none;
 
   color: #fff;
-  // background: #fff url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
-  @media @tablet-widths {
-    background-size: auto 730px;
-     // background: #fff url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
 
+
+  @media @retina {
+    background: #fff url("../img/bg-back-mobile@2x.jpg") no-repeat 50% 0;
+    background-size: auto 462px;
+  }
+  @media @tablet-widths {
+    background: #fff url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
+    background-size: auto 729px;
+    @media @retina {
+      background: #fff url("../img/bg-back-tablet@2x.jpg") no-repeat 50% 0;
+      background-size: auto 729px;
+    }
   }
   @media @desktop-widths {
-    background-size: auto 814px;
-     // background: #fff url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 0;
+    background: #fff url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 0;
+    background-size: auto 853px;
+    @media @retina {
+      background: #fff url("../img/bg-back-desktop@2x.jpg") no-repeat 50% 0;
+      background-size: auto 853px;
+    }
   }
 }
 
+// body > * {
+//   outline: 2px solid red;
+// }
 
+// body > * > * {
+//   outline: 2px dotted blue;
+//   outline-offset: -2px;
+// }
 
-body > * {
-  outline: 2px solid red;
-}
-
-body > * > * {
-  outline: 2px dotted blue;
-  outline-offset: -2px;
-}
-
-body > * > * > * {
-  outline: 2px solid green;
-  outline-offset: -4px;
-}
+// body > * > * > * {
+//   outline: 2px solid green;
+//   outline-offset: -4px;
+// }

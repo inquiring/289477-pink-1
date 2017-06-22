@@ -1,21 +1,19 @@
 .prices {
   overflow: hidden;
 
-  max-width: 320px;
-  padding-top: 60px;
-  padding-bottom: 100px;
+  min-width: 320px;
+  padding-top: 86px;
+  padding-bottom: 20px;
 
   line-height: 30px;
 
   background-color: #f2f2f2;
-
   @media @tablet-widths {
-    // overflow: ; 
+    // overflow: ;
     max-width: 100%;
-    padding-top: 40px;
-    padding-bottom: 70px;
+    padding-top: 90px;
+    padding-bottom: 44px;
   }
-
   @media @desktop-widths {
     padding-top: 75px;
     padding-bottom: 135px;
@@ -35,17 +33,14 @@
   border-top: none;
   border-bottom: none;
   background-color: #283645;
-
   &--hidden {
-    .visually-hidden()
+    .visually-hidden();
   }
-
   @media @tablet-widths {
     max-width: 150px;
     padding-top: 14px;
     padding-bottom: 9px;
   }
-
   @media @desktop-widths {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -60,14 +55,23 @@
 
 .prices__table {
   position: relative;
-  right: 172%;
+
+  width: 320px;
+  margin-left: 20px;
+
+  line-height: 30px;
 
   border-collapse: collapse;
 
+  text-transform: uppercase;
   @media @tablet-widths {
     right: 0;
 
+    width: 620px;
     margin: auto;
+  }
+  @media @desktop-widths {
+    width: 940px;
   }
 }
 
@@ -76,12 +80,10 @@
 
   font-size: 24px;
   font-weight: 300;
-
   @media @tablet-widths {
     font-size: 18px;
     line-height: 30px;
   }
-
   @media @desktop-widths {
     font-size: 24px;
   }
@@ -98,7 +100,7 @@
   color: #283645;
   border: 2px solid #e5e5e5;
   border-top: none;
-
+  background: #fff;
   @media @tablet-widths {
     position: relative;
 
@@ -106,12 +108,10 @@
 
     text-transform: capitalize;
     //
-
     &--hidden {
       font-size: 0;
     }
-    // галочки YES 
-
+    // галочки YES
     &--checked::after {
       content: "";
       position: absolute;
@@ -126,8 +126,7 @@
       border-bottom: 3px solid #3dc643;
       border-left: 3px solid #3dc643;
     }
-    // крестики NO 
-
+    // крестики NO
     &--unchecked::after ,
     &--unchecked::before {
       content: "";
@@ -140,13 +139,67 @@
 
       background-color: #f25b26;
     }
-
     &--unchecked::after {
       transform: rotate(-45deg);
     }
-
     &--unchecked::before {
       transform: rotate(45deg);
     }
+  }
+}
+
+//_--------------------------
+.prices__toggle-hidden {
+  display: none;
+}
+
+.prices__control-labels {
+  width: 80px;
+  margin: 23px auto;
+}
+
+.prices__control-label {
+  display: inline-block;
+
+  width: 6px;
+  height: 6px;
+  margin-right: 9px;
+
+  vertical-align: middle;
+
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background-color: #bec2c7;
+  background-clip: content-box;
+  @media @tablet-widths {
+    display: none;
+  }
+}
+
+#slider-table-1:checked ~ .prices__control-labels label[for=slider-table-1] ,
+#slider-table-2:checked ~ .prices__control-labels label[for=slider-table-2] ,
+#slider-table-3:checked ~ .prices__control-labels label[for=slider-table-3] ,
+#review-1:checked ~ .prices__control-labels label[for=review-1] ,
+#review-2:checked ~ .prices__control-labels label[for=review-2] ,
+#review-3:checked ~ .prices__control-labels label[for=review-3] {
+  border: 3px solid #283645;
+  background-color: transparent;
+}
+
+#slider-table-1:checked ~ .prices__table {
+  transform: translate(0);
+}
+
+#slider-table-2:checked ~ .prices__table {
+  transform: translate(-25%);
+  @media @tablet-widths {
+    transform: translate(0);
+  }
+}
+
+#slider-table-3:checked ~ .prices__table {
+  transform: translate(-75%);
+  @media @tablet-widths {
+    transform: translate(0);
   }
 }

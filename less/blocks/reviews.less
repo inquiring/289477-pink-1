@@ -1,78 +1,75 @@
 .reviews {
-  font-weight: 400;
-  line-height: 30px;
+    font-weight: 400;
+    line-height: 30px;
+    padding-top: 40px;
+    padding-bottom: 90px;
+    text-align: center;
+    color: #283645;
+    @media @tablet-widths {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding-top: 64px;
+        padding-bottom: 65px;
+    }
+}
 
-  text-align: center;
-
-  color: #283645;
-
-  @media @tablet-widths {
-    display: flex;
-    flex-direction: column;
-
-    align-content: center;
-  }
+.reviews__inner {
+    .container();
 }
 
 .reviews__title--hidden,
 .reviews__item--hidden {
-  .visually-hidden()
+    .visually-hidden();
 }
 
 .reviews__items {
-  .list-reset()
+    display: flex;
+    padding: 40px 0;
+    padding-bottom: 85px;
+    .list-reset();
 }
 
 .reviews__item {
-  @media @tablet-widths {
-    display: flex;
-    flex-direction: column;
-
-    align-content: center;
-  }
+    min-width: 280px;
+    @media @tablet-widths {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
 }
 
 .reviews__item-name {
-  margin: 0;
-
-  font-size: 18px;
-  font-weight: 700;
-
-  color: #000;
-
-  @media @tablet-widths {
-    padding-top: 20px;
-
-    font-size: 20px;
-
-    order: 2;
-  }
+    margin: 0;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    @media @tablet-widths {
+        padding-top: 35px;
+        margin-bottom: 2px;
+        font-size: 20px;
+        order: 2;
+    }
 }
 
 .reviews__item-descr {
-  margin: 0 20px;
-
-  font-size: 14px;
-
-  @media @tablet-widths {
-    font-size: 18px;
-
-    order: 1;
-    // width:50%; 
-    flex-basis: 50%;
-  }
+    margin: 0;
+    font-size: 14px;
+    @media @tablet-widths {
+        font-size: 18px;
+        order: 1;
+        // width:50%;
+        flex-basis: 50%;
+    }
 }
 
 .reviews__item-inform {
-  display: none;
-
-  @media @tablet-widths {
-    display: block;
-
-    margin: auto;
-
-    font-size: 14px;
-
-    order: 3;
-  }
+    display: none;
+    @media @tablet-widths {
+        display: block;
+        margin: auto;
+        font-size: 14px;
+        order: 3;
+    }
 }

@@ -1,65 +1,62 @@
 .page-main {
-  // основной шрифт в scaffolding font-size: 18px;line-height: 24px;
-  text-align: center;
-}
-.page-main__inner {
-  @media @desktop-widths {
-    .container();
-  }
+    // основной шрифт в scaffolding font-size: 18px;line-height: 24px;
+    text-align: center;
+    // background: #fff url("../img/bg-back-mobile@1x.jpg") no-repeat 50% -26%;
+    background-size: auto 462px;
+    @media @desktop-widths {
+
+    }
 }
 
+.page-main__inner {}
+// на страницах photo & form
 .page-main__slogan-wrapper {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 .page-main__slogan {
-  box-sizing: border-box;
-  max-width: 245px;
-  padding: 43px 0 51px;
-
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 30px;
-
-  color: #283645;
-
-  .container();
-  &--form {
-    max-width: 275px;
-    padding-bottom: 28px;
-  }
-  &--mobile-hidden {
-    display: none;
-  }
-  @media @tablet-widths {
-    max-width: 440px;
-    margin-bottom: 0;
-    padding-top: 92px;
-    padding-bottom: 76px;
-
-    font-size: 18px;
+    box-sizing: border-box;
+    max-width: 245px;
+    padding: 43px 0 51px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #283645;
+    .container();
     &--form {
-      max-width: 490px;
-      padding-bottom: 74px;
+        max-width: 275px;
+        padding-bottom: 28px;
     }
     &--mobile-hidden {
-      display: inline-block;
-
-      padding: 0;
+        display: none;
     }
-  }
-  @media @desktop-widths {
-    max-width: 575px;
-    margin-top: 0;
-    padding-bottom: 88px;
-    &--form {
-      max-width: 759px;
-      padding-bottom: 62px;
+    @media @tablet-widths {
+        max-width: 440px;
+        margin-bottom: 0;
+        padding-top: 92px;
+        padding-bottom: 76px;
+        font-size: 18px;
+        &--form {
+            max-width: 490px;
+            padding-bottom: 74px;
+        }
+        &--mobile-hidden {
+            display: inline-block;
+            padding: 0;
+        }
     }
-    &--mobile-hidden {
-      max-width: 325px;
-      margin: 0;
-      padding: 0;
+    @media @desktop-widths {
+        max-width: 575px;
+        margin-top: 0;
+        padding-bottom: 88px;
+        &--form {
+            max-width: 759px;
+            padding-bottom: 62px;
+        }
+        &--mobile-hidden {
+            max-width: 325px;
+            margin: 0;
+            padding: 0;
+        }
     }
-  }
 }
