@@ -1,7 +1,83 @@
-.slider__item--hidden {
-  .visually-hidden();
+// .slider__item--hidden {
+//   .visually-hidden();
+// }
+// .slider__wrapper {
+//   .list-reset();
+//   // display: flex;
+//   // flex-direction: row;
+// }
+// ------
+
+/* Блок, содержащий ленту изображений */
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.slider__wrapper {
-  .list-reset();
+
+/* Радиокнопка спрятанная*/
+
+.slider__radio {
+    display: none;
+}
+
+.slider__item {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0 20px;
+}
+
+/* Слайд */
+
+.slider .slider__item ~ .slider__item {
+    position: absolute;
+    opacity: 0.0;
+}
+
+.slider .slider__radio:nth-of-type(1):checked ~ .slider__item:nth-of-type(1),
+.slider .slider__radio:nth-of-type(2):checked ~ .slider__item:nth-of-type(2),
+.slider .slider__radio:nth-of-type(3):checked ~ .slider__item:nth-of-type(3) {
+    z-index: 6;
+    background-color: #fff;
+    opacity: 1.0;
+}
+
+.slider__number-list {
+    display: flex;
+    width: 76px;
+    height: 12px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slider__number {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 9px;
+    vertical-align: middle;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background-color: fade(@blue, 30%);
+    background-clip: content-box;
+    &:hover {
+        background-color: fade(@blue, 50%);
+    }
+    &:active {
+        background-color: fade(@blue, 10%);
+    }
+}
+
+.slider__number {
+    font-size: 0;
+}
+
+#itemtape1:checked ~ .slider__number-list label[for=itemtape1],
+#itemtape2:checked ~ .slider__number-list label[for=itemtape2],
+#itemtape3:checked ~ .slider__number-list label[for=itemtape3] {
+    border: 3px solid #283645;
+    background-color: transparent;
 }

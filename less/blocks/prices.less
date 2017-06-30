@@ -1,4 +1,6 @@
 .prices {
+  position: relative;
+
   overflow: hidden;
 
   min-width: 320px;
@@ -8,15 +10,47 @@
   line-height: 30px;
 
   background-color: #f2f2f2;
+  // bg-triangle
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 25px;
+
+    background-image: url("../../img/bg-triangle-white.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 100% 25px;
+  }
   @media @tablet-widths {
     // overflow: ;
     max-width: 100%;
     padding-top: 90px;
     padding-bottom: 44px;
+    // bg-triangle
+    &::before {
+      top: -10px;
+
+      height: 80px;
+
+      background-size: 100% 80px;
+    }
   }
   @media @desktop-widths {
-    padding-top: 75px;
-    padding-bottom: 135px;
+    padding-top: 150px;
+    padding-bottom: 72px;
+    // bg-triangle
+    &::before {
+      top:-10px;
+      height: 120px;
+
+      background-size: 100% 120px;
+    }
   }
 }
 
@@ -42,6 +76,7 @@
     padding-bottom: 9px;
   }
   @media @desktop-widths {
+    max-width: 230px;
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -144,6 +179,25 @@
     }
     &--unchecked::before {
       transform: rotate(45deg);
+    }
+  }
+  @media @desktop-widths {
+    padding: 14px 25px;
+
+    font-size: 18px;
+    &--hidden {
+      font-size: 0;
+    }
+    // галочки YES
+    &--checked::after {
+      top: 37%;
+      left: 44%;
+    }
+    // крестики NO
+    &--unchecked::after ,
+    &--unchecked::before {
+      top: 48%;
+      left: 43%;
     }
   }
 }

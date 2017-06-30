@@ -1,36 +1,117 @@
 .editor {
-  // display: flex; 
-  // flex-wrap: wrap; 
-  // align-content: center; 
-  // min-width: 240px; 
+  display: flex;
+
   min-height: 48px;
-  padding-bottom: 25px;
+  margin-bottom: 29px;
+  padding-top: 30px;
 
+  background: @grey;
+
+  flex-wrap: wrap;
+  justify-content: center;
   @media @tablet-widths {
-    display: table-cell;
-
-    min-height: 48px;
-
-    border: 1px dotted red;
+    // max-width: 320px;
+    min-height: 86px;
+    margin-bottom: 20px;
+    padding-top: 0;
+  }
+  @media @desktop-widths {
+    max-width: 415px;
   }
 }
 
-// .editor-item { 
-//     margin: auto; 
-//     flex-basis: 30%; 
-//     border: 1px dotted green; 
-// } 
+.editor__label {
+  min-width: 80px;
+  min-height: 65px;
 
-.editor-item__btn {
   font-size: 0;
 
-  .visually-hidden()
+  cursor: pointer;
+
+  opacity: 0.3;
+
+  order: 1;
+  &:hover {
+    opacity: 0.5;
+  }
+  @media @tablet-widths {
+    min-width: 25px;
+    min-height: 25px;
+    margin-top: 8px;
+    margin-left: 50px;
+
+    // outline: 1px dotted red;
+
+    order: 0;
+    align-self: flex-start;
+  }
+  @media @desktop-widths {
+    min-width: 45px;
+    min-height: 45px;
+    margin: 0;
+    margin-right: 48px;
+  }
 }
 
-.editor-item__range {
-  min-width: 240px;
+.editor__content {
+  display: none;
 
-  &--hidden {
-    .visually-hidden()
+  width: 100%;
+
+  order: 100;
+  flex-grow: 1;
+  @media @tablet-widths {
+    display: flex;
+
+    width: 200px;
+    padding-bottom: 17px;
+
+    order: 0;
+  }
+  @media @desktop-widths {
+    width: 230px;
+    padding-bottom: 0;
+  }
+}
+
+.editor__input[type="radio"] {
+  display: none;
+}
+
+.editor__input[type="radio"]:checked + .editor__label {
+  opacity: 1;
+}
+
+.editor__input[type="radio"]:checked + .editor__label svg ,
+.editor__input[type="radio"]:checked + .editor__label .editor-label__path {
+  fill: @pink;
+}
+
+.editor__input[type="radio"]:checked + .editor__label + .editor__content {
+  display: flex;
+
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid #dddfe0;
+  @media @tablet-widths {
+    margin-bottom: 14px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+  }
+}
+
+.editor__btn {
+  font-size: 0;
+
+  .visually-hidden();
+}
+
+.editor__range {
+  min-width: 240px;
+  margin: 0 auto;
+  padding: 20px 0;
+  @media @tablet-widths {
+    min-width: 161px;
+    padding: 15px;
   }
 }

@@ -4,10 +4,13 @@
   height: 34px;
 
   justify-content: space-around;
-
   @media @tablet-widths {
-    margin-right: 20px;
     margin-top: 15px;
+    margin-right: 20px;
+  }
+  @media @desktop-widths {
+    margin-top: 23px;
+    margin-right: 13px;
   }
 }
 
@@ -22,10 +25,12 @@
   color: #283645;
 
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 
-  // @media @tablet-widths {
-  // }
+  @media @desktop-widths {
+    font-size: 18px;
+    max-width: 147px;
+  }
 }
 
 .copyright__link {

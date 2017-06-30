@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <body>
-        <header class="page-header">
+        <header class="page-header page-header--index">
             <div class="page-header__inner">
                 <h1 class="page-header__title page-header__title--hidden">Сайт Pink</h1>
                 <nav class="main-nav main-nav--opened main-nav--nojs">
@@ -42,7 +42,14 @@
                     </div>
                     <p class="download__text">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
                 </div>
-                <img class="download__img" src="img/iphone-hand-mobile@1x.png" width="250" height="285" alt="hand-mobile">
+                <picture class="download__img">
+                    <source media="(min-width: 960px)" srcset="img/iphone-hand-desktop@1x.png 1x,
+                      img/iphone-hand-desktop@2x.png 2x">
+                    <source media="(min-width: 660px)" srcset="img/iphone-hand-tablet@1x.png 1x,
+                      img/iphone-hand-tablet@2x.png 2x">
+                    <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" alt="Превью приложения">
+                </picture>
+            </section>
             </section>
             <section class="features">
                 <h2 class="features__title features__title--hidden">Преимущества</h2>
@@ -57,7 +64,7 @@
                     </li>
                     <li class="features-item">
                         <h3 class="features-item__subtitle">Меняет мир вокруг</h3>
-                        <p class="features-item__descr">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+                        <p class="features-item__descr">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить&#160;эффект</p>
                     </li>
                     <li class="features-item">
                         <h3 class="features-item__subtitle">Заводит новых друзей</h3>
@@ -65,34 +72,55 @@
                     </li>
                 </ul>
                 <div class="features__effect">
-                    <span class="features__title features__title--effect">Эффект <br>на 24 часа!</span>
-                    <p class="features__text">Британские ученые провели исследования и доказали, что положительный эффект
-                        <br> от использования приложения длится целые сутки!</p>
+                    <div class="timer">
+                        <svg class="timer__svg1" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="238" height="275" viewBox="0 0 298 345.097" enable-background="new 0 0 298 345.097" xml:space="preserve" fill="#dedede">
+                            <path d="M264.568,102.055l5.355-5.355c7.717-7.717,9.124-18.938,3.126-24.935c-5.997-5.997-17.217-4.59-24.934,3.127l-5.386,5.385 C221.768,63.292,196.11,51.875,168,48.297v-9.583h7.658c10.914,0,19.843-8.711,19.843-19.357S186.573,0,175.659,0h-53.317  c-10.913,0-19.842,8.711-19.842,19.357s8.929,19.357,19.842,19.357H130v9.583C56.681,57.629,0,120.244,0,196.097  c0,82.291,66.709,149,149,149c82.29,0,149-66.709,149-149C298,160.434,285.465,127.703,264.568,102.055z M149,306.264 c-60.844,0-110.167-49.323-110.167-110.167S88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167  S209.843,306.264,149,306.264z" />
+                        </svg>
+                        <svg class="timer__svg2" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="203" height="203" viewBox="22.5 69.048 253 253" enable-background="new 22.5 69.048 253 253" xml:space="preserve">
+                            <path fill="#d22856" d="M149,69.048c-69.864,0-126.5,56.636-126.5,126.5c0,69.864,56.636,126.5,126.5,126.5 s126.5-56.636,126.5-126.5C275.5,125.685,218.864,69.048,149,69.048z M149,306.264c-60.844,0-110.167-49.323-110.167-110.167 C38.833,135.253,88.156,85.93,149,85.93c60.843,0,110.167,49.323,110.167,110.167C259.167,256.941,209.843,306.264,149,306.264z" />
+                        </svg>
+                        <span class="timer__24">24</span>
+                    </div>
+                    <span class="features__title features__title--effect">Эффект на&#160;24 часа!</span>
+                    <p class="features__text">Британские ученые провели исследования и доказали, что&#160;положительный эффект от&#160;использования приложения длится целые сутки!</p>
                     <a class="features__link">Узнать больше об исследовании</a>
                 </div>
             </section>
             <section class="reviews">
-                <div class="reviews__inner slider">
+                <div class="reviews__inner ">
                     <h2 class="reviews__title reviews__title--hidden">Отзывы о нас</h2>
-                    <ul class="reviews__items slider__wrapper">
+                    <!--  -->
+                    <ul class="reviews__items slider">
+                        <!-- Список радиокнопок - они скрыты -->
+                        <input name="itemtape" id="itemtape1" class="slider__radio" type="radio" checked>
+                        <input name="itemtape" id="itemtape2" class="slider__radio" type="radio">
+                        <input name="itemtape" id="itemtape3" class="slider__radio" type="radio">
+                        <!--  -->
                         <li class="reviews__item slider__item">
                             <h3 class="reviews__item-name ">Николай Петров</h3>
                             <blockquote class="reviews__item-descr ">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
                             <p class="reviews__item-inform">25 лет, водитель трамвая</p>
                         </li>
-                        <li class="reviews__item reviews__item--hidden slider__item">
+                        <li class="reviews__item slider__item">
                             <h3 class="reviews__item-name ">Василий Шендюковский</h3>
                             <blockquote class="reviews__item-descr ">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-                            <p class="reviews__item-inform ">25 лет, водитель трамвая</p>
+                            <p class="reviews__item-inform ">25 лет, водитель подводной лодки</p>
                         </li>
-                        <li class="reviews__item reviews__item--hidden slider__item">
+                        <li class="reviews__item slider__item">
                             <h3 class="reviews__item-name ">Мария Иванов</h3>
                             <blockquote class="reviews__item-descr ">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-                            <p class="reviews__item-inform ">25 лет, водитель трамвая</p>
+                            <p class="reviews__item-inform ">25 лет, водитель ракеты</p>
                         </li>
+                        <!-- Контейнер лейблов с цифрами - по клику на них выбирается слайд -->
+                        <div class="slider__number-list">
+                            <label class="slider__number" for="itemtape1">1</label>
+                            <label class="slider__number" for="itemtape2">2</label>
+                            <label class="slider__number" for="itemtape3">3</label>
+                        </div>
+                        <button class="reviews__toggler reviews__toggler--left" type="button"></button>
+                        <button class="reviews__toggler reviews__toggler--right" type="button"></button>
                     </ul>
                 </div>
-                <!--  -->
             </section>
             <section class="prices">
                 <!--  -->
@@ -164,7 +192,6 @@
                     </ul>
                 </div>
                 <div class="contacts__map">
-                    <!--  <img src="img/bg-map-mobile@1x.png" width="320" height="150" alt="map"> -->
                 </div>
             </section>
         </main>
@@ -177,11 +204,27 @@
                     </picture>
                 </a>
                 <!--  -->
-                <section class="social-links">
-                    <h2 class="social-links__title social-links__title--hidden">Мы есть в социальных сетях</h2>
-                    <a class="social-link social-link‐‐tw" href="#">twitter</a>
-                    <a class="social-link social-link‐‐fb" href="#">facebook</a>
-                    <a class="social-link social-link‐‐yb" href="#">youtube</a>
+                <section class="social">
+                    <h2 class="social__title social-links__title--hidden">Мы есть в социальных сетях</h2>
+                    <a class="social__link social__link‐‐tw" href="#">twitter
+                  <svg class="social__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17.5" height="14.663" viewBox="0 0 17.5 14.663" enable-background="new 0 0 17.5 14.663" xml:space="preserve">
+                  <g id="W6EeEF_1_">
+                  <g>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M11.283,0.153c1.736-0.485,3.074,0.263,3.685,1.151 c0.694-0.226,1.372-0.47,2.072-0.691c-0.004,0.841-0.538,1.478-0.883,1.727C16.861,2.506,17.5,1.86,17.5,1.86 c-0.175,0.976-1.035,1.746-1.611,1.977C15.65,10.429,12.617,14.793,5.507,14.66c-0.538,0,0.077,0-0.46,0 c-0.422,0-4.29-0.45-5.047-1.843c2.341,0.192,4.011-0.412,4.835-1.15c-0.989-0.293-2.761-0.464-3.07-2.881 c0.362,0.105,0.583,0.223,1.228,0.117C1.757,8.067,0.385,7.366,0.461,5.218c0.294,0.32,1.1,0.523,1.381,0.461 c-0.725-0.235-2.03-3.281-0.921-4.836C2.794,2.654,4.769,4.364,8.29,4.528C8.506,2.288,9.461,0.787,11.283,0.153z"/>
+                  </g>
+                  </g>
+                  </svg>
+                </a>
+                    <a class="social__link social__link‐‐fb" href="#">facebook
+                  <svg class="social__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="8.673" height="18.944" viewBox="0 0 8.673 18.944" enable-background="new 0 0 8.673 18.944" xml:space="preserve">
+                  <path d="M6.275,3.357c0.799,0,1.599,0,2.398,0c0-1.119,0-2.238,0-3.357c-0.959,0-1.92,0-2.878,0C2.656,0.181,1.54,2.387,1.948,6.115 H0v3.517h1.958c0,3.104,0,6.208,0,9.312c1.279,0,2.558,0,3.837,0c0-3.104,0-6.208,0-9.312h2.857V6.115H5.786 C5.765,5.07,5.75,3.709,6.275,3.357z"/>
+                  </svg>
+                </a>
+                    <a class="social__link social__link‐‐yb" href="#">youtube
+                  <svg class="social__svg" version="1.0" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14.64" height="13.96" viewBox="0 0 14.64 13.96" enable-background="new 0 0 14.64 13.96" xml:space="preserve">
+                  <path d="M1.775,13.78C0.799,14.257,0,13.758,0,12.671V1.29c0-1.088,0.799-1.585,1.775-1.109l12.133,5.932 c0.975,0.478,0.975,1.258,0,1.736L1.775,13.78z"/>
+                  </svg>
+                </a>
                 </section>
                 <div class="copyright">
                     <span class="copyright__text">Разработано

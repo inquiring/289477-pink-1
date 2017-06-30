@@ -1,14 +1,13 @@
 .posts {
-  display: flex;
-  flex-direction: column;
+  background-color: @white;
 
-  .container();
+
 
     @media @tablet-widths {
     display: flex;
 
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     //
   }
 }
@@ -18,18 +17,16 @@
 }
 
 .posts__wrapper {
+  .container();
   @media @tablet-widths {
+    // .container();
     display: flex;
-
-    width: 620px;
-    margin: auto;
-
-    flex-flow: row wrap;
-    justify-content: space-between;
+   flex-flow: row wrap;
+   justify-content: space-around;
   }
 
   @media @desktop-widths {
-    width: 940px;
-    margin: auto;
+
+
   }
 }

@@ -1,70 +1,75 @@
 .page-header {
-  // background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat;
-  background-size: 100% 100%;
-  // background-color: rgba(255, 255, 255, 0.3);
+    background: #1d2631 url("../img/bg-back-mobile@1x.jpg") no-repeat;
+    width: 100%;
+    background-color: fade(@blue, 70%);
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+    @media @retina {
+        background-image: url("../img/bg-back-mobile@2x.jpg");
+        background-size: 700px auto;
+    }
+    @media @tablet-widths {
+        background-image: url("../img/bg-back-tablet@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        background-size: 1200px 729px;
+        @media @tablet-retina {
+            background-image: url("../img/bg-back-tablet@2x.jpg");
+            background-size: 1200px 729px;
+        }
+    }
+    @media @desktop-widths {
+        background-image: url("../img/bg-back-desktop@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0%;
+        background-size: 2560px auto;
+        // overflow: hidden;
+        @media @desktop-retina {
+            background-image: url("../img/bg-back-desktop@2x.jpg");
+            background-size: 2560px auto;
+        }
+    }
 }
 
+
 .page-header__inner {
-  @media @desktop-widths {
-    .container();
-  }
+    @media @desktop-widths {
+        .container();
+    }
 }
 
 .page-header__title {
-  // на странице фото
-  margin: auto;
-  padding: 35px 20px 87px;
-
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 29px;
-
-  text-align: center;
-
-  color: #fff;
-  // на главной странице
-  &--hidden {
-    .visually-hidden();
-  }
-  // на странице form
-  &--form {
-    padding-bottom: 53px;
-  }
-  @media @tablet-widths {
-    padding: 81px 40px 150px;
-
-    font-size: 50px;
-    line-height: 60px;
-    &--form {
-      padding: 83px 40px 79px;
+    // на странице фото
+    margin: auto;
+    padding: 35px 20px 87px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    text-align: center;
+    color: #fff;
+    // на главной странице
+    &--hidden {
+        .visually-hidden();
     }
-  }
-  @media @desktop-widths {
-    padding-top: 74px;
-    padding-bottom: 111px;
-
-
+    // на странице form
     &--form {
-      padding-top: 73px;
-      padding-bottom: 100px;
+        padding-bottom: 53px;
     }
-  }
+    @media @tablet-widths {
+        padding: 81px 40px 150px;
+        font-size: 50px;
+        line-height: 60px;
+        &--form {
+            padding: 83px 40px 79px;
+        }
+    }
+    @media @desktop-widths {
+        padding-top: 74px;
+        padding-bottom: 111px;
+        &--form {
+            padding-top: 73px;
+            padding-bottom: 100px;
+        }
+    }
 }
-
-
-
-
-
-
-
-// @media @desktop-widths {
-//     .page-header__toggle {
-//         .no-outline();
-//     }
-//     .page-header__wrapper {}
-//     .page-header {
-//         display: flex;
-//         justify-content: space-between;
-//         // background-color: rgba(255, 255, 255, 0.3);
-//     }
-// }

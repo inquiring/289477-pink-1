@@ -1,23 +1,27 @@
 .upload {
+
   display: flex;
   flex-direction: column;
 
-  padding-top: 25px;
+  padding-top: 10px;
 
   font-size: 14px;
   line-height: 30px;
 
-  color: #283645;
+  color: @white;
+
+  align-items: center;
   @media @tablet-widths {
-    width: 100%;
-    margin-bottom: 70px;
+    padding-top: 12px;
 
     font-size: 18px;
   }
   @media @desktop-widths {
-    width: 960px;
-    margin: auto;
+    paddig-top: 0;
   }
+}
+.upload__wrapper{
+  .container();
 }
 
 .upload__title--hidden {
@@ -25,80 +29,99 @@
 }
 
 .upload__slogan {
-  margin: auto;
-  // margin: 0 20px;
-  margin-bottom: 20px;
+  margin-bottom: 43px;
 
   font-size: 14px;
-  font-weight: 400;
   line-height: 30px;
 
   text-align: center;
 
-  color: #283645;
-}
+  color: @blue;
 
-.upload__inner {
+  font-weight: 400;
+  max-width: 250px;
   @media @tablet-widths {
-    display: flex;
+    max-width: 450px;
+    margin-top: 35px;
+    margin-bottom: 70px;
 
-    width: 620px;
-    margin: 0 auto;
-    // flex-flow: row wrap;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  @media @desktop-widths {
+    margin-top: 8px;
+    margin-bottom: 67px;
   }
 }
 
 .upload__form {
+
   display: flex;
   flex-direction: column;
 
-  margin-top: 20px;
-  padding: 20px 20px 40px;
+  padding: 20px 20px 33px;
 
-  background-color: #f2f2f2;
+  background-color: @grey;
   @media @tablet-widths {
-    display: flex;
-    // justify-content: space-around;
+    flex-direction: row;
+
 
     padding: 0;
     padding-top: 55px;
-    padding-bottom: 15px;
-    // flex-direction: row;
+    padding-bottom: 54px;
+    padding-left: 40px;
+    padding-right: 40px;
 
-    flex-flow: row;
+    justify-content: space-around;
+  }
+  @media @desktop-widths {
+    width: 940px;
+    margin: 0 auto;
+    padding-left: 0;
+    padding-bottom: 58px;
   }
 }
 
 .upload__img {
-  margin: auto;
-  margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 0;
   @media @tablet-widths {
-    min-width: 300px;
-    height: 400px;
+    width: 300px;
+
+  }
+  @media @desktop-widths {
+    margin-left: 30px;
   }
 }
 
 .upload__container {
+
   display: flex;
   flex-direction: column;
 
-  height: 400px;
-}
+  @media @desktop-widths {
+    flex-direction: row;
 
-.editor {
-  width: 100%;
-  height: 200px;
-  margin: auto;
+    max-width: 424px;
+    margin-right: 0;
 
-  background-color: red;
+    flex-wrap: wrap;
+  }
 }
 
 .upload__btn {
-  // margin: auto;
   margin-bottom: 10px;
   @media @tablet-widths {
-    margin-bottom: 0;
+    min-width: 259px;
+    margin-top: 40px;
 
-    font-weight: 700;
+    align-self: flex-end;
+    &:last-child {
+      margin-top: 24px;
+    }
+  }
+  @media @desktop-widths {
+    min-width: 180px;
   }
 }
+

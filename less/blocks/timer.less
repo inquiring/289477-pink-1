@@ -1,0 +1,46 @@
+.timer {
+    position: relative;
+    width: 238px;
+    margin-right: auto;
+    @media @tablet-widths {
+        position: absolute;
+        display: block;
+        top: 25px;
+        left: 25px;
+    }
+    @media @desktop-widths {
+        width: 298px;
+        left: 100px;
+    }
+}
+
+.timer__svg1 {
+    height: 275px;
+    @media @desktop-widths {
+        width: 300px;
+        height: 347px;
+    }
+}
+
+.timer__svg2 {
+    position: absolute;
+    width: 203px;
+    left: 50%;
+    top: 55.5%;
+    transform: translate(-50%, -50%);
+    @media @desktop-widths {
+        width: 253px;
+        height: 253px;
+    }
+}
+
+.timer__24 {
+    position: absolute;
+    left: 50%;
+    top: 52.5%;
+    transform: translate(-50%, -50%);
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 149, 47px;
+    color: @pink;
+}

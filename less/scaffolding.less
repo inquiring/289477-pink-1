@@ -1,47 +1,21 @@
 body {
-  margin: 0;
+    margin: 0;
+    font-family: "Open Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #fff;
 
-  font-family: "Open Sans", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 24px;
-
-  text-decoration: none;
-
-  color: #fff;
-
-
-  @media @retina {
-    background: #fff url("../img/bg-back-mobile@2x.jpg") no-repeat 50% 0;
-    background-size: auto 462px;
-  }
-  @media @tablet-widths {
-    background: #fff url("../img/bg-back-tablet@1x.jpg") no-repeat 50% 0;
-    background-size: auto 729px;
-    @media @retina {
-      background: #fff url("../img/bg-back-tablet@2x.jpg") no-repeat 50% 0;
-      background-size: auto 729px;
-    }
-  }
-  @media @desktop-widths {
-    background: #fff url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 0;
-    background-size: auto 853px;
-    @media @retina {
-      background: #fff url("../img/bg-back-desktop@2x.jpg") no-repeat 50% 0;
-      background-size: auto 853px;
-    }
-  }
 }
 
-// body > * {
-//   outline: 2px solid red;
-// }
-
-// body > * > * {
-//   outline: 2px dotted blue;
-//   outline-offset: -2px;
-// }
-
-// body > * > * > * {
-//   outline: 2px solid green;
-//   outline-offset: -4px;
-// }
+body > * {
+  outline: 2px solid red;
+}
+body > * > * {
+  outline: 2px dotted blue;
+  outline-offset: -2px;
+}
+body > * > * > * {
+  outline: 2px solid green;
+  outline-offset: -4px;
+}

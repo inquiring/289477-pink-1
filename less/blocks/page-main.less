@@ -1,14 +1,87 @@
 .page-main {
-    // основной шрифт в scaffolding font-size: 18px;line-height: 24px;
+    // // основной шрифт в scaffolding font-size: 18px;line-height: 24px;
     text-align: center;
-    // background: #fff url("../img/bg-back-mobile@1x.jpg") no-repeat 50% -26%;
-    background-size: auto 462px;
+    background-image: url("../img/bg-back-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center -62px;
+    @media @retina {
+        background-image: url("../img/bg-back-mobile@2x.jpg");
+        background-size: auto 462px;
+    }
+    @media @tablet-widths {
+        background-image: url("../img/bg-back-tablet@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: center -110px;
+        background-size: 1200px 729px;
+        @media @tablet-retina {
+            background-image: url("../img/bg-back-tablet@2x.jpg");
+            background-size: 1200px 729px;
+        }
+    }
     @media @desktop-widths {
 
+        background-image: url("../img/bg-back-desktop@1x.jpg");
+        background-repeat: no-repeat;
+        background-position: center -110px;
+        background-size: 2560px auto;
+
+        @media @desktop-retina {
+            background-image: url("../img/bg-back-desktop@2x.jpg");
+            background-size: 2560px auto;
+        }
     }
 }
 
-.page-main__inner {}
+.page-main__img {
+    padding-top: -66px;
+    width: 320px;
+    background-repeat: no-repeat;
+    background-position: center -66px;
+    // background-size: 320px auto;
+    @media @tablet-widths {
+        width: 700px;
+    }
+    //     @media @desktop-widths{
+    //       width: 1200px;
+    //     }
+}
+
+.page-main__title {
+    // на странице фото
+    margin: auto;
+    padding: 30px 20px 84px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    text-align: center;
+    color: #fff;
+    // на главной странице
+    &--hidden {
+        .visually-hidden();
+    }
+    // на странице form
+    &--form {
+        padding-bottom: 53px;
+    }
+    @media @tablet-widths {
+        padding: 81px 40px 150px;
+        font-size: 50px;
+        line-height: 60px;
+        &--form {
+            padding: 83px 40px 79px;
+        }
+    }
+    @media @desktop-widths {
+        padding-top: 74px;
+        padding-bottom: 111px;
+        &--form {
+            padding-top: 73px;
+            padding-bottom: 100px;
+            width: 747px;
+        }
+    }
+}
+
 // на страницах photo & form
 .page-main__slogan-wrapper {
     background-color: #fff;
@@ -59,4 +132,11 @@
             padding: 0;
         }
     }
+}
+
+
+
+.post--panorama {
+    // // основной шрифт в scaffolding font-size: 18px;line-height: 24px;
+    margin-top: 68px;
 }
